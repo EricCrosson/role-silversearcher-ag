@@ -1,0 +1,9 @@
+---
+# install ag wrapper script in user's $HOME/bin directory                 
+- name: install ag wrapper script                                         
+  copy:                                                                         
+    src: files/ag                                                              
+    dest: "{{ ansible_env.HOME }}/bin/ag"                                      
+    mode: 0755                                                                  
+                                                                                
+# TODO: ensure $HOME/bin directory is in his path 
