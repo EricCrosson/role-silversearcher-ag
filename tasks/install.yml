@@ -2,3 +2,5 @@
 # Handles the installation of silversearcher-ag
 
 - include: ubuntu_install.yml
+  become: yes
+  become_user: root

@@ -14,6 +14,6 @@
 
 - name: install ag
   apt:
-    name: ag
+    name: silversearcher-ag
     state: present
   when: installed.rc != 0
