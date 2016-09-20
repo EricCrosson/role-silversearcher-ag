@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Written by Eric Crosson
+# 09-20-2016
+#
+# Wrap ag as described by shuttlethread.com/blog/useful-ack-defaults.
+#
+# Less flags:
+# - x4 tells less to use 4 char tabs
+# - S tells less not to fold long lines (scroll them off to the right)
+# - R tells less to colorize terminal output
+# - F tells less to quit if there is less than one screen
+# - X tells less to ignore an initialization termcap might tell it to do.
+#     i.e. GNU screen will not send ack output to a secondary screen, meaning
+#     when less is terminated, what you were looking at is still visible above
+#     your new PS1.
+
+ag --pager "less -x4SRFX" "$@"

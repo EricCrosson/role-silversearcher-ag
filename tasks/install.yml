@@ -1,0 +1,4 @@
+---
+# Handles the installation of silversearcher-ag
+
+- include: ubuntu_install.yml

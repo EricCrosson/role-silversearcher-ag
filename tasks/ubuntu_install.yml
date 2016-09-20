@@ -1,0 +1,19 @@
+---
+# install ag
+- name: check if ag is installed
+  command: which ag
+  register: installed
+  failed_when: installed.rc > 1
+  changed_when: no
+
+- name: update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 604800
+  when: installed.rc != 0
+
+- name: install ag
+  apt:
+    name: ag
+    state: present
+  when: installed.rc != 0
