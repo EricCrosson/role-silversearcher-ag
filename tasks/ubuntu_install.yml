@@ -7,12 +7,16 @@
   changed_when: no
 
 - name: update apt cache
+  become: yes
+  become_user: root
   apt:
     update_cache: yes
     cache_valid_time: 604800
   when: installed.rc != 0
 
 - name: install ag
+  become: yes
+  become_user: root
   apt:
     name: silversearcher-ag
     state: present
