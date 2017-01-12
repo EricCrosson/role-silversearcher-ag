@@ -14,4 +14,4 @@
 #     when less is terminated, what you were looking at is still visible above
 #     your new PS1.
 
-ag --pager "less -x4SRFX" "$@"
+ag --pager "less -x4SRFX" "$@" 2>/dev/null
